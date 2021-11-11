@@ -21,13 +21,24 @@ which mason
 # Windows
 where mason
 ```
+### init `mason`
+- Create a new directory 'mason'
+- Change to that directory
+```sh
+cd mason
+```
+```sh
+mason init
+```
+
+Note: there seems to be a problem with 'mason add --source git < repo url > ...' , clone the git repo and use 'mason add --source path < cloned directory > ...'
 
 ### make `Flutter APP` project
 
 - install `quick_flutter_app` brick of `mason`
 
 ```sh
-mason install https://github.com/woodemi/quick_flutter.brick --path app
+mason add --source git https://github.com/woodemi/quick_flutter.brick --path app
 ```
 
 - make `Flutter APP` project with mutliplatform
@@ -47,7 +58,7 @@ mason make quick_flutter_app --project YOUR_PROJECT_NAME
 - install `quick_flutter_plugin` brick of `mason`
 
 ```sh
-mason install https://github.com/woodemi/quick_flutter.brick --path plugin
+mason add --source git https://github.com/woodemi/quick_flutter.brick --path plugin
 ```
 
 - make `Flutter plugin` project with mutliplatform
@@ -70,8 +81,8 @@ mason make quick_flutter_plugin --project YOUR_PROJECT_NAME
 > CAUTION: According to https://github.com/woodemi/quick_flutter.brick/issues/22, `quick_flutter_federated_legacy` is for predate structure, where Android & iOS were in the app-facing package
 
 ```sh
-mason install https://github.com/woodemi/quick_flutter.brick --path federated
-# mason install https://github.com/woodemi/quick_flutter.brick --path federated_legacy
+mason add --source git https://github.com/woodemi/quick_flutter.brick --path federated
+# mason add --source git https://github.com/woodemi/quick_flutter.brick --path federated_legacy
 ```
 
 - make `Flutter federated plugin` project with mutliplatform
